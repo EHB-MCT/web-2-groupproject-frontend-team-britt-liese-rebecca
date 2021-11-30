@@ -42,6 +42,6 @@ function newChallenge() {
         .then(function (data) {
             console.log(data)
         })
-    //add new challenge to all challenges
+    //display new challenge with all challenges
     displayAll();
 }

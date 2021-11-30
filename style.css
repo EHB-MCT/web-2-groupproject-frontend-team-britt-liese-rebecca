@@ -22,33 +22,33 @@ h1 {
     color: white;
 }
 
-#form #name {
+#name {
     margin: 2% 0;
     padding: 2% 0;
     border: none;
 }
 
-#form #points {
+#points {
     color: rgb(100, 100, 100);
     margin: 2% 0;
     padding: 2% 0;
     border: none;
 }
 
-#form #course {
+#course {
     margin: 2% 0;
     padding: 2% 0;
     border: none;
 }
 
-#form #session {
+#session {
     color: rgb(100, 100, 100);
     margin: 2% 0;
     padding: 2% 0;
     border: none;
 }
 
-#form #submit {
+#submit {
     color: rgb(100, 100, 100);
     margin-top: 25px;
     padding: 5px 0px;
