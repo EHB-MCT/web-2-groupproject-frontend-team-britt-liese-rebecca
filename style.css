@@ -2,7 +2,7 @@
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif
 }
 
-h1{
+h1 {
     color: cadetblue;
 }
 
@@ -36,17 +36,8 @@ h1{
 }
 
 #form #course {
-    color: rgb(100, 100, 100);
-    background-color: white;
     margin: 2% 0;
-    padding: 3% 1%;
-    border: none;
-}
-
-#form #course h3 {
-    margin: 0;
-    margin-bottom: 5px;
-    font-size: 0.8em;
+    padding: 2% 0;
     border: none;
 }
 
