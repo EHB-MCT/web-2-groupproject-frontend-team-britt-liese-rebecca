@@ -54,3 +54,35 @@ h1 {
     padding: 5px 0px;
     border: none;
 }
+
+/*****************
+  ALL CHALLENGES
+*****************/
+#challengeBlock {
+    display: flex;
+    flex-direction: row;
+    margin-top: 15px;
+}
+
+#card {
+    width: 32%;
+    display: flex;
+    flex-direction: column;
+
+    margin: auto;
+    text-align: center;
+    border: cadetblue solid 2px;
+}
+
+#card:hover {
+    background-color: cadetblue;
+    color: white;
+    height: 125px;
+    width: 33%;
+}
+
+#info {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
