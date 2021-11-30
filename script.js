@@ -10,12 +10,14 @@ window.onload = function () {
 }
 
 function displayAll() {
+    //fetching all challenges
     fetch(`url`)
         .then(response => response.json())
         .then(function (data) {
             let challenge = document.getElementById('challengeBlock')
             let htmlString = ""
 
+            //displaying all data
             data.forEach(challenge => {
                 htmlString +=
                     `<article id="card">
@@ -34,6 +36,7 @@ function displayAll() {
 }
 
 function newChallenge() {
+    //post user created challenge
     fetch(`url`)
         .then(response => response.json())
         .then(function (data) {
