@@ -1,0 +1,65 @@
+* {
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif
+}
+
+h1{
+    color: cadetblue;
+}
+
+/****************
+       FORM
+****************/
+#form {
+    background-color: cadetblue;
+    padding: 5% 2.5%;
+    width: 30%;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+}
+
+#form h2 {
+    color: white;
+}
+
+#form #name {
+    margin: 2% 0;
+    padding: 2% 0;
+    border: none;
+}
+
+#form #points {
+    color: rgb(100, 100, 100);
+    margin: 2% 0;
+    padding: 2% 0;
+    border: none;
+}
+
+#form #course {
+    color: rgb(100, 100, 100);
+    background-color: white;
+    margin: 2% 0;
+    padding: 3% 1%;
+    border: none;
+}
+
+#form #course h3 {
+    margin: 0;
+    margin-bottom: 5px;
+    font-size: 0.8em;
+    border: none;
+}
+
+#form #session {
+    color: rgb(100, 100, 100);
+    margin: 2% 0;
+    padding: 2% 0;
+    border: none;
+}
+
+#form #submit {
+    color: rgb(100, 100, 100);
+    margin-top: 25px;
+    padding: 5px 0px;
+    border: none;
+}

@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./style.css" />
+    <script type="module" src="./script.js"></script>
+    <title>Gamification</title>
+</head>
+
+<body>
+    <h1> Gamification </h1>
+
+    <!--Insert/Edit block-->
+    <form id="form">
+        <h2>Insert a new challenge</h2>
+        <!--Name-->
+        <input id="name" type="text" name="name" placeholder="Name of challenge" />
+        <!--Points-->
+        <select id="points" name="points">
+            <option value="" disabled selected hidden>How many points</option>
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5</option>
+            <option value="6">6</option>
+            <option value="7">7</option>
+            <option value="8">8</option>
+            <option value="9">9</option>
+            <option value="10">10</option>
+        </select>
+        <!--Course-->
+        <fieldset id="course">
+            <h3>Which course</h3>
+            <div>
+                <input id="web1" type="radio" value="web I" name="course">
+                <label for="web1">Web I</label>
+                <input id="web2" type="radio" value="web II" name="course">
+                <label for="geen">Web II</label>
+                <input id="bestCourse" type="radio" value="the best course" name="course">
+                <label for="bestCourse">The best course</label>
+            </div>
+        </fieldset>
+        <!--Session-->
+        <select id="session" name="session">
+            <option value="" disabled selected hidden>Which session</option>
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5</option>
+            <option value="6">6</option>
+            <option value="7">7</option>
+            <option value="8">8</option>
+            <option value="9">9</option>
+            <option value="10">10</option>
+        </select>
+        <button id="submit" type="submit">Submit</button>
+    </form>
+
+
+
+    <!---List block-->
+
+</body>
+
+</html>
