@@ -11,9 +11,10 @@ window.onload = function () {
 
 function displayAll() {
     //fetching all challenges
-    fetch(`url`)
+    fetch('https://teambritt.herokuapp.com/challenges')
         .then(response => response.json())
         .then(function (data) {
+            console.log(data);
             let challenge = document.getElementById('challengeBlock')
             let htmlString = ""
 
@@ -35,6 +36,7 @@ function displayAll() {
         });
 }
 
+/*
 function newChallenge() {
     //post user created challenge
     fetch(`url`)
@@ -44,4 +46,4 @@ function newChallenge() {
         })
     //display new challenge with all challenges
     displayAll();
-}
+}*/
