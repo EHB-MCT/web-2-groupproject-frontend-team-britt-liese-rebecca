@@ -22,7 +22,7 @@ h1 {
     color: white;
 }
 
-#name {
+#form #name {
     margin: 2% 0;
     padding: 2% 0;
     border: none;

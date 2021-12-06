@@ -14,7 +14,6 @@ function displayAll() {
     fetch('https://teambritt.herokuapp.com/challenges')
         .then(response => response.json())
         .then(function (data) {
-            console.log(data);
             let challenge = document.getElementById('challengeBlock')
             let htmlString = ""
 
@@ -36,14 +35,26 @@ function displayAll() {
         });
 }
 
-/*
 function newChallenge() {
+    //get form values
+    let name = document.getElementById('name').value;
+    let points = document.getElementById('points').value;
+    let course = document.getElementById('course').value;
+    let session = document.getElementById('session').value;
     //post user created challenge
-    fetch(`url`)
-        .then(response => response.json())
-        .then(function (data) {
-            console.log(data)
+    fetch('https://teambritt.herokuapp.com/challenges', {
+            method: 'POST',
+            body: JSON.stringify({
+                name,
+                points,
+                course,
+                session
+            })
         })
+        .then(response => response.json())
+        .then(data => {
+            console.log('challenge made', data);
+        });
     //display new challenge with all challenges
     displayAll();
-}*/
+}
