@@ -80,7 +80,7 @@ function newChallenge() {
         .then(response => response.json())
         .then(data => {
             console.log('challenge made', data);
-            setTimeout(displayAll, 1000)
+            //setTimeout(displayAll, 1000)
         });
 }
 
@@ -93,7 +93,7 @@ function deleteChallenge(id) {
         .then(response => response.json())
         .then(data => {
             console.log(`challenge deleted with id: ${id}`, data);
-            setTimeout(displayAll, 1000)
+            //setTimeout(displayAll, 1000)
         });
 }
 
