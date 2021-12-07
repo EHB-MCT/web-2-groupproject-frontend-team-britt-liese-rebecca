@@ -3,12 +3,12 @@
 let verwijder = document.getElementsByClassName('delete');
 let verander = document.getElementsByClassName('edit');
 document.getElementById('editblock').style.display = "none"
-
-setInterval(displayAll, 1000)
 document.getElementById('form').addEventListener('submit', e => {
     e.preventDefault();
     newChallenge();
 })
+setInterval(displayAll, 1000)
+
 
 //Display all existing challenges
 function displayAll() {
@@ -124,6 +124,7 @@ function editChallenge(id) {
             .then(response => response.json())
             .then(data => {
                 console.log('challenge changed', data);
+                setTimeout(document.getElementById('editblock').style.display = "none" && displayAll, 2000)
             });
     });
 }
