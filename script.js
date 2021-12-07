@@ -21,13 +21,17 @@ function displayAll() {
             data.forEach(challenge => {
                 htmlString +=
                     `<article id="card">
-                        <div>
+                       
                             <h3>${challenge.name}</h3>
-                        </div>
+                        
                         <div id="info">
                             <p>${challenge.course}</p>
                             <p>${challenge.points}</p>
                             <p>${challenge.session}</p>
+                        </div>
+                        <div id="change">
+                            <p id="delete">delete</p>
+                            <p id="change">change</p>
                         </div>
                     </article>`
             })
