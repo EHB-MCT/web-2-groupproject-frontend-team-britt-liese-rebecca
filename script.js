@@ -47,6 +47,9 @@ function newChallenge() {
     //post user created challenge
     fetch('https://teambritt.herokuapp.com/saveData', {
             method: 'POST',
+            headers: {
+                'Content-Type': 'application/json',
+            },
             body: JSON.stringify({
                 name,
                 points,
