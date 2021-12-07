@@ -21,7 +21,6 @@ function displayAll() {
             data.forEach(challenge => {
                 htmlString +=
                     `<article id="card">
-                       
                             <h3>${challenge.name}</h3>
                         
                         <div id="info">
