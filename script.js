@@ -23,8 +23,7 @@ function displayAll() {
             data.forEach(challenge => {
                 htmlString +=
                     `<article id="card">
-                            <h3>${challenge.name}</h3>
-                        
+                        <h3>${challenge.name}</h3>
                         <div id="info">
                             <p>course: ${challenge.course}</p>
                             <p>points: ${challenge.points}</p>
@@ -99,4 +98,32 @@ function deleteChallenge(id) {
 //To change an existing challenge
 function editChallenge(id) {
     document.getElementById('editblock').style.display = "";
+
+
+    document.getElementById('editForm').addEventListener('submit', function (e) {
+        e.preventDefault();
+        let name = document.getElementById('editName').value
+        let points = document.getElementById('editPoints').value
+        let course = document.getElementById('editCourse').value
+        let session = document.getElementById('editSession').value
+
+        let challenge = {
+            name,
+            points,
+            course,
+            session
+        }
+        //post user created challenge
+        fetch(`https://teambritt.herokuapp.com/challenges/${id}`, {
+                method: 'PUT',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify(challenge)
+            })
+            .then(response => response.json())
+            .then(data => {
+                console.log('challenge changed', data);
+            });
+    });
 }

@@ -125,23 +125,19 @@ main {
        EDIT
 *****************/
 #editblock {
-    background-color: cadetblue;
-
     position: fixed;
+    background-color: cadetblue;
+    border-radius: 15px;
     top: 15%;
-    left: 50%;
+    left: 55%;
 }
 
 #editForm {
-    background-color: cadetblue;
-    border-radius: 15px;
-
-    /*box-sizing: border-box;*/
-    width: 30%;
+    width: 75%;
     height: 50vh;
 
     margin: 0 50px 0 35px;
-    padding: 5% 2.5%;
+    padding: 15% 2.5% 5%;
 
     display: flex;
     flex-direction: column;
@@ -154,5 +150,32 @@ main {
 #editForm #name {
     margin: 2% 0;
     padding: 2% 0;
+    border: none;
+}
+
+#editForm #points {
+    color: rgb(100, 100, 100);
+    margin: 2% 0;
+    padding: 2% 0;
+    border: none;
+}
+
+#editForm #course {
+    margin: 2% 0;
+    padding: 2% 0;
+    border: none;
+}
+
+#editForm #session {
+    color: rgb(100, 100, 100);
+    margin: 2% 0;
+    padding: 2% 0;
+    border: none;
+}
+
+#editForm #submit {
+    color: rgb(100, 100, 100);
+    margin-top: 25px;
+    padding: 5px 0px;
     border: none;
 }
