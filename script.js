@@ -2,6 +2,7 @@
 
 let verwijder = document.getElementsByClassName('delete');
 let verander = document.getElementsByClassName('edit');
+document.getElementById('editblock').style.display = "none"
 
 setInterval(displayAll, 1000)
 document.getElementById('form').addEventListener('submit', e => {
@@ -97,5 +98,5 @@ function deleteChallenge(id) {
 
 //To change an existing challenge
 function editChallenge(id) {
-    console.log('changed', id)
+    document.getElementById('editblock').style.display = "";
 }

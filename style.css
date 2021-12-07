@@ -120,3 +120,39 @@ main {
     color: white;
     background-color: cadetblue;
 }
+
+/*****************
+       EDIT
+*****************/
+#editblock {
+    background-color: cadetblue;
+
+    position: fixed;
+    top: 15%;
+    left: 50%;
+}
+
+#editForm {
+    background-color: cadetblue;
+    border-radius: 15px;
+
+    /*box-sizing: border-box;*/
+    width: 30%;
+    height: 50vh;
+
+    margin: 0 50px 0 35px;
+    padding: 5% 2.5%;
+
+    display: flex;
+    flex-direction: column;
+}
+
+#editForm h2 {
+    color: white;
+}
+
+#editForm #name {
+    margin: 2% 0;
+    padding: 2% 0;
+    border: none;
+}
