@@ -44,18 +44,17 @@ function newChallenge() {
     let points = document.getElementById('points').value;
     let course = document.getElementById('course').value;
     let session = document.getElementById('session').value;
+
+    let challenge = {
+        name, points, course,session
+    }
     //post user created challenge
-    fetch('https://teambritt.herokuapp.com/saveData', {
+    fetch('https://teambritt.herokuapp.com/challenges', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',
             },
-            body: JSON.stringify({
-                name,
-                points,
-                course,
-                session
-            })
+            body: JSON.stringify(challenge)
         })
         .then(response => response.json())
         .then(data => {
