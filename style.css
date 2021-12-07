@@ -17,10 +17,14 @@ main {
 #form {
     background-color: cadetblue;
     border-radius: 15px;
-    padding: 5% 2.5%;
+
     /*box-sizing: border-box;*/
     width: 30%;
+    height: 50vh;
+
     margin: 0 50px 0 35px;
+    padding: 5% 2.5%;
+
     display: flex;
     flex-direction: column;
 }
@@ -79,7 +83,7 @@ main {
 
     box-sizing: border-box;
     width: 45%;
-    height: 30%;
+    height: 20vh;
 
     margin: 5px;
     padding-top: 5px;

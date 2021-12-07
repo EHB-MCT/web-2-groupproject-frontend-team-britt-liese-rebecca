@@ -1,13 +1,14 @@
 "use strict"
 
-window.onload = function () {
-    displayAll();
-
+function timer() {
     document.getElementById('form').addEventListener('submit', e => {
         e.preventDefault();
         newChallenge();
     })
+
+    setInterval(displayAll, 1000)
 }
+
 
 function displayAll() {
     //fetching all challenges
@@ -46,7 +47,10 @@ function newChallenge() {
     let session = document.getElementById('session').value;
 
     let challenge = {
-        name, points, course,session
+        name,
+        points,
+        course,
+        session
     }
     //post user created challenge
     fetch('https://teambritt.herokuapp.com/challenges', {
@@ -60,6 +64,6 @@ function newChallenge() {
         .then(data => {
             console.log('challenge made', data);
         });
-    //display new challenge with all challenges
-    displayAll();
 }
+
+timer()
