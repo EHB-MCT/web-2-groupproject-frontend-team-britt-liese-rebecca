@@ -42,7 +42,7 @@ function newChallenge() {
     let course = document.getElementById('course').value;
     let session = document.getElementById('session').value;
     //post user created challenge
-    fetch('https://teambritt.herokuapp.com/challenges', {
+    fetch('https://teambritt.herokuapp.com/saveData', {
             method: 'POST',
             body: JSON.stringify({
                 name,
