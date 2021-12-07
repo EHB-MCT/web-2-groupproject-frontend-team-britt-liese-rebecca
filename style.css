@@ -113,11 +113,10 @@ main {
     justify-content: space-around;
 }
 
-#change p {
+#change button {
     margin: 10px 0;
-}
-
-#change p:hover {
-    color: cadetblue;
-    text-transform: uppercase;
+    padding: 3px 5px;
+    border: none;
+    color: white;
+    background-color: cadetblue;
 }

@@ -1,15 +1,15 @@
 "use strict"
 
-function timer() {
-    document.getElementById('form').addEventListener('submit', e => {
-        e.preventDefault();
-        newChallenge();
-    })
+let verwijder = document.getElementsByClassName('delete');
+let verander = document.getElementsByClassName('edit');
 
-    setInterval(displayAll, 1000)
-}
+setInterval(displayAll, 1000)
+document.getElementById('form').addEventListener('submit', e => {
+    e.preventDefault();
+    newChallenge();
+})
 
-
+//Display all existing challenges
 function displayAll() {
     //fetching all challenges
     fetch('https://teambritt.herokuapp.com/challenges')
@@ -25,20 +25,37 @@ function displayAll() {
                             <h3>${challenge.name}</h3>
                         
                         <div id="info">
-                            <p>${challenge.course}</p>
-                            <p>${challenge.points}</p>
-                            <p>${challenge.session}</p>
+                            <p>course: ${challenge.course}</p>
+                            <p>points: ${challenge.points}</p>
+                            <p>session: ${challenge.session}</p>
                         </div>
                         <div id="change">
-                            <p id="delete">delete</p>
-                            <p id="change">change</p>
+                            <button id="delete" class="delete" value="${challenge._id}" >delete</button>
+                            <button id="edit" class="edit" value="${challenge._id}" >change</button>
                         </div>
                     </article>`
             })
             challenge.innerHTML = htmlString
+            //Eventlisteners for delete
+            for (let i = 0; i < verwijder.length; i++) {
+                verwijder[i].addEventListener('click', e => {
+                    e.preventDefault();
+                    let id = document.getElementById('delete').value;
+                    deleteChallenge(id);
+                })
+            }
+            //Eventlisteners for change
+            for (let i = 0; i < verander.length; i++) {
+                verander[i].addEventListener('click', e => {
+                    e.preventDefault();
+                    let id = document.getElementById('edit').value;
+                    editChallenge(id);
+                })
+            }
         });
 }
 
+//Add a new challenge
 function newChallenge() {
     //get form values
     let name = document.getElementById('name').value;
@@ -66,4 +83,19 @@ function newChallenge() {
         });
 }
 
-timer()
+//To change an existing challenge
+function deleteChallenge(id) {
+    //Delete selected object
+    fetch(`https://teambritt.herokuapp.com/challenges/${id}`, {
+            method: 'DELETE'
+        })
+        .then(response => response.json())
+        .then(data => {
+            console.log(`challenge deleted with id: ${id}`, data);
+        });
+}
+
+//To change an existing challenge
+function editChallenge(id) {
+    console.log('changed', id)
+}
