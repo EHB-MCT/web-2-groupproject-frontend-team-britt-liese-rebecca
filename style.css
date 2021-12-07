@@ -89,11 +89,6 @@ main {
     text-align: center;
 }
 
-#card:hover {
-    background-color: cadetblue;
-    color: white;
-}
-
 #card h3 {
     margin-bottom: 5px;
 }
@@ -116,4 +111,9 @@ main {
 
 #change p {
     margin: 10px 0;
+}
+
+#change p:hover {
+    color: cadetblue;
+    text-transform: uppercase;
 }
