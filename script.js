@@ -80,6 +80,7 @@ function newChallenge() {
         .then(response => response.json())
         .then(data => {
             console.log('challenge made', data);
+            setTimeout(displayAll, 1000)
         });
 }
 
@@ -92,6 +93,7 @@ function deleteChallenge(id) {
         .then(response => response.json())
         .then(data => {
             console.log(`challenge deleted with id: ${id}`, data);
+            setTimeout(displayAll, 1000)
         });
 }
 
@@ -124,7 +126,8 @@ function editChallenge(id) {
             .then(response => response.json())
             .then(data => {
                 console.log('challenge changed', data);
-                setTimeout(document.getElementById('editblock').style.display = "none" && displayAll, 2000)
+                setTimeout(document.getElementById('editblock').style.display = "none", 2000)
+                setTimeout(displayAll, 1000)
             });
     });
 }
